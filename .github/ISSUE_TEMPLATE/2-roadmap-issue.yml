@@ -54,6 +54,7 @@ body:
         - OrthogonalSpinGroups
         - PDE
         - PeripheralActions
+        - PivotalSpherical
         - PolynomialGaloisGroups
         - ProfiniteArithmetic
         - ProfiniteCohomology
