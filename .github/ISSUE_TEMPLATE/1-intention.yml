@@ -28,6 +28,7 @@ body:
         - CFSGStatement
         - Chebotarev
         - ClassFieldTheory
+        - ClassifyingSpaces
         - CombinatorialHeegaardFloer
         - ConformalMapping
         - DGAInfinity
