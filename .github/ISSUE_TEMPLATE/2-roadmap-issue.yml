@@ -50,6 +50,7 @@ body:
         - LocalGaloisGroups
         - ModularCurves
         - ModularForms
+        - NoncommutativeGeometry
         - NumberFieldArithmetic
         - OneParameterSemigroups
         - OperatorTheory
