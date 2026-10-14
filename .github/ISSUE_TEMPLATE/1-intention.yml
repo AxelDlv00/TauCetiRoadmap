@@ -35,6 +35,7 @@ body:
         - DGFloer
         - DenseGraphLimits
         - DifferentialGeometry
+        - DiophantineApproximationAndTranscendence
         - EllipticCurves
         - Exchangeability
         - FuchsianOrbifolds
