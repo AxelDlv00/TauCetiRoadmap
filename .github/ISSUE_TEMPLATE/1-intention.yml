@@ -28,15 +28,19 @@ body:
         - CFSGStatement
         - Chebotarev
         - ClassFieldTheory
+        - ClassifyingSpaces
         - CombinatorialHeegaardFloer
         - ConformalMapping
         - DGAInfinity
         - DGFloer
         - DenseGraphLimits
         - DifferentialGeometry
+        - DiophantineApproximationAndTranscendence
         - EllipticCurves
         - Exchangeability
+        - FormalLaurentPuiseux
         - FuchsianOrbifolds
+        - GeometricMeasureTheory
         - GeometricTopology
         - GlobalNumberFields
         - GlobalQuadraticForms
@@ -44,6 +48,7 @@ body:
         - HeegaardFloer
         - HopfRinow
         - IntegralLattices
+        - Isoperimetry
         - JacobianChallenge
         - LocalFieldsRamification
         - LocalGaloisGroups
@@ -55,7 +60,9 @@ body:
         - OptimalTransport
         - OrthogonalSpinGroups
         - PDE
+        - PadicMeasuresIwasawaAlgebras
         - PeripheralActions
+        - PivotalSpherical
         - PolynomialGaloisGroups
         - ProfiniteArithmetic
         - ProfiniteCohomology
@@ -64,6 +71,7 @@ body:
         - RealAlgebraicGeometry
         - ReductiveGroups
         - RepresentationTheory
+        - SchemeAndStackFoundations
         - StablePeriodicCurved
         - StableReduction
         - StandardDistributions
