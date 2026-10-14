@@ -19,7 +19,6 @@ body:
         - AlgebraicTopology
         - AlgebraicVectorBundles
         - AnalyticToricGeometry
-        - ArithmeticDirichletSeries
         - BelyiMaps
         - CFSGStatement
         - Chebotarev
@@ -42,6 +41,7 @@ body:
         - GlobalQuadraticForms
         - GrothendieckEulerForms
         - HeegaardFloer
+        - HeightsAndUnits
         - HopfRinow
         - IntegralLattices
         - Isoperimetry
@@ -50,6 +50,7 @@ body:
         - LocalGaloisGroups
         - ModularCurves
         - ModularForms
+        - NoncommutativeGeometry
         - NumberFieldArithmetic
         - OneParameterSemigroups
         - OperatorTheory
