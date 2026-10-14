@@ -58,6 +58,7 @@ body:
         - OptimalTransport
         - OrthogonalSpinGroups
         - PDE
+        - PadicMeasuresIwasawaAlgebras
         - PeripheralActions
         - PivotalSpherical
         - PolynomialGaloisGroups
