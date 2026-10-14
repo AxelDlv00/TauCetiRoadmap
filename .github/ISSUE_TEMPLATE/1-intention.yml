@@ -38,6 +38,7 @@ body:
         - DiophantineApproximationAndTranscendence
         - EllipticCurves
         - Exchangeability
+        - FormalLaurentPuiseux
         - FuchsianOrbifolds
         - GeometricMeasureTheory
         - GeometricTopology
