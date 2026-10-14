@@ -106,15 +106,26 @@ README's names, closed by the Tau Ceti declaration even where its name differs. 
 
 Left out: the companion graph-regularity roadmap, outside this roadmap by the README's text.
 
-Not certified, because the Tau Ceti declarations are private or anonymous at the pin:
+Where each certificate comes from. Almost every statement below is closed by a single exported
+Tau Ceti (or Mathlib) declaration. The exceptions are of three kinds.
 
-* **Design-validation regressions.** Finite gluing with zero-mass middle atoms, the null-cell
-  witness `exists_partition_stepGraphonAvg_ne_self_bernoulliMeasure`, both round-trip directions
-  and the Layer-5 Dirac, finite-atomic and mixed cases are stated below. The remaining checks
-  exist in Tau Ceti only as anonymous `example`s on private data: the null-cell Pythagoras,
-  increment and iteration-exponent values (`StepGraphon/Validation.lean`), the corrupted
-  representative's round trip on `(I, volume)` (`AEEqFun/Validation.lean`), and the finite-case
-  Möbius-consistency and dissociation checks (`Representability/Validation.lean`).
+* **Proved in this file from exported declarations.** `cutNorm_eq_iSup_testIntegral` (the
+  `[0,1]`-valued test-function form of the cut norm, from Tau Ceti's upper bound and the
+  indicator identity), `isDissociated_iff_ergodicSMul` (graph-side ergodicity, from
+  `isDissociated_iff_jointlyDissociated` and the array API's `jointlyDissociated_iff_ergodicSMul`),
+  and `toAEEqFun_injective_fin_two` (the round trip on the uniform two-point carrier). Tau Ceti
+  does not export these at the pin.
+* **README-form weakenings of sharper Tau Ceti bounds.** Frieze–Kannan and the collision estimate,
+  as recorded above; the proofs only weaken the exported bound.
+* **Checked in Tau Ceti but not certified here**, because the checks are anonymous `example`s on
+  private data. Finite gluing with zero-mass middle atoms, the null-cell witness
+  `exists_partition_stepGraphonAvg_ne_self_bernoulliMeasure`, both round-trip directions and the
+  Layer-5 Dirac, finite-atomic and mixed cases are stated below. The remaining checks are the
+  null-cell Pythagoras, increment and iteration-exponent values (`StepGraphon/Validation.lean`),
+  the corrupted representative's round trip on `(I, volume)` (`AEEqFun/Validation.lean`), and the
+  finite-case Möbius-consistency and dissociation checks (`Representability/Validation.lean`), all
+  under `TauCeti/Combinatorics/DenseGraphLimits/`. Tau Ceti's library globs every `TauCeti.*`
+  module, so these modules are built, and their checks run, at the pin.
 -/
 
 namespace TauCetiRoadmap.DenseGraphLimits
