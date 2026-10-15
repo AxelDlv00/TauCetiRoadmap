@@ -19,6 +19,7 @@ body:
         - AlgebraicTopology
         - AlgebraicVectorBundles
         - AnalyticToricGeometry
+        - BanachSpaceTheory
         - BelyiMaps
         - CFSGStatement
         - Chebotarev
