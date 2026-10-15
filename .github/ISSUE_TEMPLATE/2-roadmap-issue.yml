@@ -26,6 +26,7 @@ body:
         - ClassFieldTheory
         - ClassifyingSpaces
         - CombinatorialHeegaardFloer
+        - CompactOperators
         - ConformalMapping
         - DGAInfinity
         - DGFloer
@@ -59,6 +60,7 @@ body:
         - OptimalTransport
         - OrthogonalSpinGroups
         - PDE
+        - PadicFunctionalAnalysis
         - PadicMeasuresIwasawaAlgebras
         - PeripheralActions
         - PivotalSpherical
