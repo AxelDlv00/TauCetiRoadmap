@@ -69,6 +69,7 @@ body:
         - ProfiniteCohomology
         - ProfiniteProPGroups
         - QuadraticFormInvariants
+        - QuantumGroups
         - RealAlgebraicGeometry
         - ReductiveGroups
         - RepresentationTheory
