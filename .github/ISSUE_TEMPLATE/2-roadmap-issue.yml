@@ -51,6 +51,7 @@ body:
         - LocalGaloisGroups
         - ModularCurves
         - ModularForms
+        - NewtonPolygons
         - NoncommutativeGeometry
         - NumberFieldArithmetic
         - OneParameterSemigroups
