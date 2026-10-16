@@ -73,6 +73,7 @@ body:
         - QuantumGroups
         - RealAlgebraicGeometry
         - ReductiveGroups
+        - Regularity
         - RepresentationTheory
         - RigidAnalyticGeometry
         - SchemeAndStackFoundations
