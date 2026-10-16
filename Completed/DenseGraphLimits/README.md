@@ -697,10 +697,12 @@ not when the file merely compiles.
 ## Ordering
 
 Layers 0–2 and 7 first — they validate the pipeline and give visible checkpoints. The AE view
-(Layer 3) lands next, as the prerequisite for the analytic layers. Then Layer 6a (separation) as the
-highest-leverage self-contained summit, with Layer 4 (compactness) alongside it. Layer 5
-(coupling↔map) runs in parallel, gated on the measure-preserving mod-null equivalence, and must not
-block the others. The representability summit's real build order is
+(Layer 3) lands next, as the prerequisite for the analytic layers, then Layer 4 (compactness).
+Layer 9a's finite sampling and the in-probability half of Layer 9c come before separation (Layer
+6a), which is proved from them. Compactness (Layer 4) and separation (6a) together give the
+convergence equivalence (6b), and 6b together with the concentration argument gives the
+almost-sure half of 9c. Layer 5 (coupling↔map) runs in parallel, gated on the measure-preserving
+mod-null equivalence, and must not block the others. The representability summit's real build order is
 **Layer 8a → Layer 9b (graph-law representation/extremality) → Layer 8b**: the 8b spine consumes
 `ExchangeableGraphLaw`, `upperMass`, `IsDissociated`, and `exists_graphon_of_isDissociated`, so
 Layer 9b precedes 8b. Layer 9b itself consumes Layer 9a's sampling objects, Layer 4's
@@ -709,7 +711,7 @@ descended coordinates that drive limit identification and uniqueness); Layer 9c 
 convergence) is independent of both 9b and 8b and can land in parallel; 8a is independent and can
 land any time after Layer 0.
 
-Layers 4–6 are independent and likely to attract duplicate work, so **register an Intention and
+Layers 4–6 are likely to attract duplicate work, so **register an Intention and
 `claim` the specific target** before a substantial push (see *Coordinating work* in the repository
 README).
 
