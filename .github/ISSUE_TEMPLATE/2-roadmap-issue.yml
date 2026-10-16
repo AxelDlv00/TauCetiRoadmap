@@ -39,6 +39,7 @@ body:
         - Exchangeability
         - FormalLaurentPuiseux
         - FuchsianOrbifolds
+        - GeneralizedCohomology
         - GeometricMeasureTheory
         - GeometricTopology
         - GlobalNumberFields
@@ -59,6 +60,7 @@ body:
         - NoncommutativeGeometry
         - NumberFieldArithmetic
         - OneParameterSemigroups
+        - OperatorAlgebraDynamics
         - OperatorTheory
         - OptimalTransport
         - OrthogonalSpinGroups
