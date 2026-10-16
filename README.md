@@ -91,6 +91,7 @@ then read its guidance on [writing](CONTRIBUTING.md#the-roadmap-writing-process)
 - [Standard probability distributions and their elementary theory](TauCetiRoadmap/StandardDistributions/README.md)
 - [The Chebotarev density theorem](TauCetiRoadmap/Chebotarev/README.md)
 - [The Jacobian challenge](TauCetiRoadmap/JacobianChallenge/README.md)
+- [The Yamabe problem and conformal scalar curvature](TauCetiRoadmap/Yamabe/README.md)
 - [Zigzag, preprojective, and Ginzburg algebras](TauCetiRoadmap/ZigzagPreprojective/README.md)
 
 ## Completed roadmaps

@@ -91,6 +91,7 @@ body:
         - StablePeriodicCurved
         - StableReduction
         - StandardDistributions
+        - Yamabe
         - ZigzagPreprojective
     validations:
       required: true
