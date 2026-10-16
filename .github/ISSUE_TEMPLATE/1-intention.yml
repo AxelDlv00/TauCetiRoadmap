@@ -20,6 +20,7 @@ body:
       options:
         - AdicSpaces
         - AdicSpacesPartII
+        - AffineMorseLefschetz
         - AlgebraicCurves
         - AlgebraicTopology
         - AlgebraicVectorBundles
