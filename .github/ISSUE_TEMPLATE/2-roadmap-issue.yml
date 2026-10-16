@@ -54,6 +54,7 @@ body:
         - JacobianChallenge
         - LocalFieldsRamification
         - LocalGaloisGroups
+        - MassFormula
         - ModularCurves
         - ModularForms
         - NewtonPolygons
