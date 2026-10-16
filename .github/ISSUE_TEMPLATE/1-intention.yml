@@ -80,6 +80,7 @@ body:
         - ReductiveGroups
         - Regularity
         - RepresentationTheory
+        - RestrictedPowerSeries
         - RigidAnalyticGeometry
         - SchemeAndStackFoundations
         - StablePeriodicCurved
