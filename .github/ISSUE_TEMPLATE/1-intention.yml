@@ -78,6 +78,7 @@ body:
         - RealAlgebraicGeometry
         - ReductiveGroups
         - RepresentationTheory
+        - RigidAnalyticGeometry
         - SchemeAndStackFoundations
         - StablePeriodicCurved
         - StableReduction
