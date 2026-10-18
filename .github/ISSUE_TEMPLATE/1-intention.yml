@@ -90,6 +90,7 @@ body:
         - RestrictedPowerSeries
         - RigidAnalyticGeometry
         - SchemeAndStackFoundations
+        - SpinGeometry
         - StablePeriodicCurved
         - StableReduction
         - StandardDistributions
