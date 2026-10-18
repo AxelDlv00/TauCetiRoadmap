@@ -44,6 +44,7 @@ body:
         - GeometricTopology
         - GlobalNumberFields
         - GlobalQuadraticForms
+        - GraphConnectivityAndFlows
         - GrothendieckEulerForms
         - HeegaardFloer
         - HeightsAndUnits
