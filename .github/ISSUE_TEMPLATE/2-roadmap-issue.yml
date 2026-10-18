@@ -77,6 +77,7 @@ body:
         - PeripheralActions
         - PivotalSpherical
         - PolynomialGaloisGroups
+        - PositiveScalarCurvature
         - ProfiniteArithmetic
         - ProfiniteCohomology
         - ProfiniteProPGroups
