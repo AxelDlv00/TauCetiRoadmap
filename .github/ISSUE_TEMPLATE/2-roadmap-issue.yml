@@ -27,6 +27,7 @@ body:
         - CFSGStatement
         - Chebotarev
         - ClassFieldTheory
+        - ClassicalArithmeticCompletion
         - ClassifyingSpaces
         - CombinatorialHeegaardFloer
         - CompactOperators
@@ -55,6 +56,7 @@ body:
         - IntegralLattices
         - Isoperimetry
         - JacobianChallenge
+        - KhovanovHomology
         - LocalFieldsRamification
         - LocalGaloisGroups
         - MassFormula
