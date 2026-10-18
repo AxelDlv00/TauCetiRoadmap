@@ -35,6 +35,7 @@ body:
         - DGAInfinity
         - DGFloer
         - DenseGraphLimits
+        - DerivedModuleAlgebra
         - DifferentialGeometry
         - DiophantineApproximationAndTranscendence
         - EllipticCurves
