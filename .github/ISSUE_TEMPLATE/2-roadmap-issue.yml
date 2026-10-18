@@ -23,6 +23,7 @@ body:
         - AnalyticToricGeometry
         - BanachSpaceTheory
         - BelyiMaps
+        - BordismFormalGroups
         - CFSGStatement
         - Chebotarev
         - ClassFieldTheory
@@ -38,6 +39,7 @@ body:
         - EllipticCurves
         - Exchangeability
         - FormalLaurentPuiseux
+        - FreeProbability
         - FuchsianOrbifolds
         - GeneralizedCohomology
         - GeometricMeasureTheory
