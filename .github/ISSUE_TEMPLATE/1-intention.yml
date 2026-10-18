@@ -62,6 +62,7 @@ body:
         - MassFormula
         - ModularCurves
         - ModularForms
+        - MorseNovikov
         - MorseTheory
         - NewtonPolygons
         - NoncommutativeGeometry
