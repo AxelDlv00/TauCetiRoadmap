@@ -53,6 +53,7 @@ body:
         - GlobalQuadraticForms
         - GraphConnectivityAndFlows
         - GrothendieckEulerForms
+        - HamiltonianFloerOperations
         - HeegaardFloer
         - HeightsAndUnits
         - HopfRinow
@@ -92,15 +93,18 @@ body:
         - QuantumGroups
         - RealAlgebraicGeometry
         - ReductiveGroups
+        - ReflectionInvariantTheory
         - Regularity
         - RepresentationTheory
         - RestrictedPowerSeries
         - RigidAnalyticGeometry
         - SchemeAndStackFoundations
+        - SchubertGeometry
         - SpinGeometry
         - StablePeriodicCurved
         - StableReduction
         - StandardDistributions
+        - TaubesGromov
         - Yamabe
         - ZigzagPreprojective
     validations:
