@@ -46,6 +46,7 @@ body:
         - DifferentialGeometry
         - DiophantineApproximationAndTranscendence
         - EllipticCurves
+        - EnhancedDerivedSheaves
         - Exchangeability
         - FinancialMathematics
         - FormalLaurentPuiseux
