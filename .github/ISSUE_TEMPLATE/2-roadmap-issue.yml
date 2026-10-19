@@ -25,6 +25,7 @@ body:
         - AlgebraicVectorBundles
         - AmenableGroups
         - AnalyticToricGeometry
+        - BanachAlgebras
         - BanachSpaceTheory
         - BelyiMaps
         - BordismFormalGroups
