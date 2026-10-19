@@ -16,6 +16,7 @@ body:
       options:
         - AdicSpaces
         - AdicSpacesPartII
+        - AffineLieAlgebras
         - AffineMorseLefschetz
         - AlgebraicCurves
         - AlgebraicTopology
@@ -46,6 +47,7 @@ body:
         - FuchsianOrbifolds
         - GeneralizedCohomology
         - GeometricMeasureTheory
+        - GeometricRepresentationCategories
         - GeometricTopology
         - GlobalNumberFields
         - GlobalQuadraticForms
