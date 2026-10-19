@@ -20,6 +20,7 @@ body:
         - AlgebraicCurves
         - AlgebraicTopology
         - AlgebraicVectorBundles
+        - AmenableGroups
         - AnalyticToricGeometry
         - BanachSpaceTheory
         - BelyiMaps
