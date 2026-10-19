@@ -33,6 +33,7 @@ body:
         - ClassifyingSpaces
         - CombinatorialHeegaardFloer
         - CompactOperators
+        - ComplexCurveModuli
         - ConformalMapping
         - DGAInfinity
         - DGFloer
