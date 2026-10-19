@@ -120,6 +120,7 @@ then read its guidance on [writing](CONTRIBUTING.md#the-roadmap-writing-process)
 - [The Jacobian challenge](TauCetiRoadmap/JacobianChallenge/README.md)
 - [The Yamabe problem and conformal scalar curvature](TauCetiRoadmap/Yamabe/README.md)
 - [Zigzag, preprojective, and Ginzburg algebras](TauCetiRoadmap/ZigzagPreprojective/README.md)
+- [Étale cohomology foundations](TauCetiRoadmap/EtaleCohomologyFoundations/README.md)
 
 ## Completed roadmaps
 
