@@ -119,6 +119,7 @@ body:
         - StablePeriodicCurved
         - StableReduction
         - StandardDistributions
+        - SymplecticGeometry
         - TauberianBoundaryConvergence
         - TaubesGromov
         - ThetaSeries
