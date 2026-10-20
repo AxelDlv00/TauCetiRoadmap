@@ -72,6 +72,7 @@ body:
         - HeightsAndUnits
         - HopfRinow
         - Hyperfunctions
+        - ImaginaryQuadraticClassNumber
         - InfinitaryLogic
         - IntegralLattices
         - Isoperimetry
@@ -116,6 +117,7 @@ body:
         - RigidAnalyticGeometry
         - SchemeAndStackFoundations
         - SchubertGeometry
+        - SeibergWittenTheory
         - SpinGeometry
         - StablePeriodicCurved
         - StableReduction
@@ -123,6 +125,7 @@ body:
         - TauberianBoundaryConvergence
         - TaubesGromov
         - ThetaSeries
+        - TypeAHeckeAlgebras
         - Yamabe
         - ZigzagPreprojective
     validations:
