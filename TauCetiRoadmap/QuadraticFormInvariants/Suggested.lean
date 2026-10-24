@@ -10,7 +10,9 @@ import TauCeti.FieldTheory.GaloisCohomology.MuTwo.Basic
 import TauCeti.NumberTheory.LocalField.QuadraticForm.Defect
 import TauCeti.NumberTheory.LocalField.QuadraticForm.Bimultiplicativity
 import TauCeti.LinearAlgebra.QuadraticForm.Transfer.Basic
-import TauCeti.LinearAlgebra.Matrix.PinPlusPlane
+import TauCeti.LinearAlgebra.Matrix.PinPlusPlane.Basic
+import TauCeti.LinearAlgebra.Matrix.PinPlusPlane.CartanDieudonne
+import TauCeti.LinearAlgebra.Matrix.PinPlusPlane.GaloisAction
 import TauCeti.Algebra.Quaternion.Binary
 import TauCeti.Algebra.Quaternion.NormForm
 import TauCeti.Algebra.Quaternion.SplittingCriterion
