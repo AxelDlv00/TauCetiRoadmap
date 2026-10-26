@@ -51,6 +51,7 @@ body:
         - ComplexTori
         - ComputabilityTheory
         - ConformalMapping
+        - CountableModelCounting
         - DGAInfinity
         - DGFloer
         - DenseGraphLimits
