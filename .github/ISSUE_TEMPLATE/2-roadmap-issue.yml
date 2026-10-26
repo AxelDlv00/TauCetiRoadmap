@@ -135,6 +135,8 @@ body:
         - StablePeriodicCurved
         - StableReduction
         - StandardDistributions
+        - SubspaceTheorem
+        - SuccessiveMinima
         - SymplecticGeometry
         - TauberianBoundaryConvergence
         - TaubesGromov
