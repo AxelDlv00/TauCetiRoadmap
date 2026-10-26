@@ -45,6 +45,7 @@ body:
         - ComplexKahlerGeometry
         - ComplexManifolds
         - ComplexTori
+        - ComputabilityTheory
         - ConformalMapping
         - DGAInfinity
         - DGFloer
