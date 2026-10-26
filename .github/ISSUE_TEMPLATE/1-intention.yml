@@ -38,6 +38,7 @@ body:
         - BorelEquivalenceRelations
         - CFSGBasicProperties
         - CFSGStatement
+        - CharacteristicClasses
         - Chebotarev
         - ClassFieldTheory
         - ClassicalArithmeticCompletion
@@ -73,6 +74,7 @@ body:
         - GlobalNumberFields
         - GlobalQuadraticForms
         - GraphConnectivityAndFlows
+        - GroebnerGeometry
         - GrothendieckEulerForms
         - HamiltonianFloerOperations
         - HeegaardFloer
@@ -140,6 +142,7 @@ body:
         - TauberianBoundaryConvergence
         - TaubesGromov
         - ThetaSeries
+        - TopologicalKTheory
         - TypeAHeckeAlgebras
         - Yamabe
         - ZigzagPreprojective
