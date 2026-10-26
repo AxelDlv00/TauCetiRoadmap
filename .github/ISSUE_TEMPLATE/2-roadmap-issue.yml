@@ -108,6 +108,7 @@ body:
         - ProfiniteArithmetic
         - ProfiniteCohomology
         - ProfiniteProPGroups
+        - PurityOfBranchLocus
         - QuadraticFormInvariants
         - QuantumGroups
         - Rank24LatticeConstructions
