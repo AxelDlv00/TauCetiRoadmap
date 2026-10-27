@@ -55,6 +55,7 @@ body:
         - DifferentialGeometry
         - DiophantineApproximationAndTranscendence
         - EllipticCurves
+        - EllipticIntegrals
         - EnhancedDerivedSheaves
         - EtaleCohomologyFoundations
         - Exchangeability
