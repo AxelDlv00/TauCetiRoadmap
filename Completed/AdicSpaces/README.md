@@ -1,5 +1,11 @@
 # Roadmap: foundations of adic spaces
 
+**Completion evidence.** The archived specification is realized by the canonical Tau Ceti
+implementation, including closed-immersion factorisation for general Huber pairs. The historical
+`Suggested.lean` remains a nonexhaustive interface prototype at this repository's dependency pin;
+its admitted targets are not a proof certificate. Current-source verification and the final
+factorisation prerequisite are recorded in the archive PR.
+
 This roadmap develops Huber's theory of adic spaces from the underlying topological algebra to
 Tate acyclicity and the gluing of adic spaces. The final application is the construction of the
 adic Fargues–Fontaine curve
@@ -519,7 +525,8 @@ sheaf in `CompleteSeparatedTopCommRingCat`.
 
 Keep the following notions distinct.
 
-- `Huber.IsSheafyPair A Aplus`: the chosen pair has a sheaf structure presheaf.
+- `Huber.IsSheafyPair A Aplus`: the chosen pair has a sheaf structure presheaf; the canonical
+  implementation is `Huber.IsSheafyForEveryPresentation A Aplus`, with independence of presentation.
 - `Huber.IsSheafyRing A`: Wedhorn Definition 8.26, quantified over rings of integral elements of
   the completion.
 - `Huber.IsStablySheafyRing A`: every topologically finite-type algebra over the completion is

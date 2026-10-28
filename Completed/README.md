@@ -57,3 +57,5 @@ revision against which an earlier version elaborated.
   (declared complete 2026-10-28)
 - [Profinite integers, profinite powers, and continuous automorphisms](ProfiniteArithmetic/README.md)
   (declared complete 2026-10-28)
+- [foundations of adic spaces](AdicSpaces/README.md)
+  (declared complete 2026-10-28)
