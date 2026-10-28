@@ -17,8 +17,6 @@ certificate without changing the mathematics, the certificate is updated along w
 dependency pin. Git history and each revision's `lake-manifest.json` retain the exact dependency
 revision against which an earlier version elaborated.
 
-- [Effective arithmetic bounds and geometry of numbers](EffectiveBounds/README.md)
-  (declared complete 2026-07-02)
 - [Weighted orthogonal L² bases: completeness, Hilbert bases, and products of orthogonal systems](OrthogonalL2Bases/README.md)
   (declared complete 2026-08-16)
 - [Contour integration and the Hungerbühler–Wasem generalized residue theorem](ContourIntegration/README.md)

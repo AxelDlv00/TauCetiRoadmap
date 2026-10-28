@@ -2,6 +2,11 @@
 <!--tauceti-coverage:v1 {"layers":[{"id":"Layer 0","remaining":"optional: connect the packing and doubling API to Mathlib's ZLattice and covolume","state":"done"},{"id":"Layer 1","state":"done"},{"id":"Layer 2","state":"done"},{"id":"Layer 3","remaining":"regulator lower bounds for positive unit rank and the volume computations for the class number formula","state":"partial"}],"readme_sha":"5c436d080fbdd4a94bb2f626b574b9c660b4b40d7ddfe0554c16e2227466713e","roadmap":"EffectiveBounds","to_sha":"315040461dd16f4333a14977d01a661f2c11e50a"}-->
 # Status: EffectiveBounds
 
+**Completion repair, 2026-10-28.** This roadmap is active again for the existing Layer 3
+regulator-bound and unit-log volume targets. The earlier archive declaration was premature for
+the full README. The generated report below is a historical snapshot, not a current completion
+claim; its structured Layer 3 coverage already records these targets as partial.
+
 This file documents the status of the EffectiveBounds roadmap up until `3150404` (2026-10-23T17:09:14Z). There may have been subsequent updates.
 
 It is generated, and its prose is not security-validated; see
