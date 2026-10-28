@@ -45,3 +45,5 @@ revision against which an earlier version elaborated.
   (declared complete 2026-10-28)
 - [exchangeability and de Finetti](Exchangeability/README.md)
   (declared complete 2026-10-28)
+- [one-parameter semigroups, completely monotone and positive-definite functions, and Bochner-type representations](OneParameterSemigroups/README.md)
+  (declared complete 2026-10-28)
