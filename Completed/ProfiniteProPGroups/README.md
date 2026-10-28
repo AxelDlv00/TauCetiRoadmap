@@ -4,7 +4,7 @@
 discharged by the Tau Ceti (or Mathlib) declaration that realizes it, with no `sorry`. Seven
 statements of this document were found to be mathematically wrong at archiving; they are corrected
 in the closing section *Errata, corrected at archiving*. The first is an edge-case remark; for
-the other six `Suggested.lean` certifies the corrected forms.
+the other seven `Suggested.lean` certifies the corrected forms.
 
 This roadmap develops the abstract group theory used throughout the arithmetic portfolio:
 profinite foundations, supernatural order and Sylow theory, Frattini quotients and generator
