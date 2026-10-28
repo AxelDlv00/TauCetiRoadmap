@@ -20,7 +20,6 @@ body:
       options:
         - AbhyankarLemma
         - AdicEtaleGeometry
-        - AdicSpaces
         - AdicSpacesPartII
         - AdicSpacesPartIII
         - AdicSpacesPartIV
@@ -53,7 +52,6 @@ body:
         - CountableModelCounting
         - DGAInfinity
         - DGFloer
-        - DenseGraphLimits
         - DerivedModuleAlgebra
         - DifferentialGeometry
         - DiophantineApproximationAndTranscendence
