@@ -118,6 +118,7 @@ body:
         - PositiveScalarCurvature
         - ProfiniteArithmetic
         - ProfiniteCohomology
+        - ProfiniteProPGroups
         - PurityOfBranchLocus
         - QuadraticFormInvariants
         - QuantumGroups
