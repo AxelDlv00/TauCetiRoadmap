@@ -1258,7 +1258,8 @@ example {p : ℕ} {E : Type u} [Group E] [TopologicalSpace E] [IsTopologicalGrou
     [CompactSpace E] {G : Type v} [Group G] [TopologicalSpace G] [T2Space G]
     (hG : TauCeti.IsProP p G) {f : E →* G} (hf : Continuous f) (hs : Function.Surjective f)
     (hker : TauCeti.IsProP p f.ker) : TauCeti.IsProP p E :=
-  hG.of_ker_isProP hf hs hker
+  hG.of_ker_isProP (MonoidHom.isOpenQuotientMap_of_isQuotientMap
+    (Topology.IsQuotientMap.of_surjective_continuous hs hf)).isOpenMap hs hker
 
 /-- **Layer 3, `IsProP` example `ℤ_p`**: Tau Ceti's `TauCeti.isProP_multiplicative_padicInt`. -/
 example (p : ℕ) [Fact p.Prime] : TauCeti.IsProP p (Multiplicative ℤ_[p]) :=
@@ -3184,18 +3185,18 @@ example :
 
 /-- **Layer 5, the bijection is natural in `M`**: it commutes with pushforward along a continuous
 equivariant `f : M → N` and the coefficient map of `f` on `H²`. Tau Ceti's
-`TauCeti.ProfiniteGroupExtension.contCohomologyClassEquiv_map`. -/
+`MulDistribMulActionHom.profiniteGroupExtensionContCohomologyClassEquiv_map`. -/
 example {N : Type w} [CommGroup N] [TopologicalSpace N] [IsTopologicalGroup N]
     [MulDistribMulAction G N] [ContinuousSMul G N] [CompactSpace N] [TotallyDisconnectedSpace N]
     (f : M →*[G] N) (hf : Continuous f)
     (q : Quotient (TauCeti.ProfiniteGroupExtension.continuousEquivSetoid G M)) :
     TauCeti.ProfiniteGroupExtension.contCohomologyClassEquiv G N
-        (Quotient.map' (TauCeti.ProfiniteGroupExtension.map f hf)
-          (fun _ _ ↦ TauCeti.ProfiniteGroupExtension.continuousEquivSetoid_map f hf) q) =
+        (Quotient.map' (fun X ↦ X.map f hf)
+          (fun X Y ↦ X.continuousEquivSetoid_map Y f hf) q) =
       TauCeti.ContCohomology.explicitCoeff2 G (Additive M) f.toAdditive
         (f.continuous_toAdditive hf)
         (TauCeti.ProfiniteGroupExtension.contCohomologyClassEquiv G M q) :=
-  TauCeti.ProfiniteGroupExtension.contCohomologyClassEquiv_map f hf q
+  MulDistribMulActionHom.profiniteGroupExtensionContCohomologyClassEquiv_map f hf q
 
 /-- **Layer 5, splitting.** A profinite extension has a continuous homomorphic section exactly
 when its class in `H²(G, M)` is zero: Tau Ceti's
@@ -3235,7 +3236,7 @@ theorem ProfiniteGroupExtension.exists_continuous_monoidHom_of_contCohomologyCla
       φ.comp X.toGroupExtension.inl = Y.toGroupExtension.inl.comp (f : M →* N) ∧
       Y.toGroupExtension.rightHom.comp φ = X.toGroupExtension.rightHom :=
   TauCeti.ProfiniteGroupExtension.exists_continuous_monoidHom_of_contCohomologyClass_map_eq
-    f hf X Y h
+    X f hf Y h
 
 -- The old signature carries `[IsTopologicalGroup M] [ContinuousSMul G M]`, which the Tau Ceti
 -- statement does not need; they are kept so that the signature is unchanged.
@@ -3251,7 +3252,7 @@ theorem ProfiniteGroupExtension.contCohomologyClass_map_eq_of_continuous_monoidH
     (hright : Y.toGroupExtension.rightHom.comp φ = X.toGroupExtension.rightHom) :
     (X.map f hf).contCohomologyClass = Y.contCohomologyClass :=
   TauCeti.ProfiniteGroupExtension.contCohomologyClass_map_eq_of_continuous_monoidHom
-    f hf X Y φ hφ hinl hright
+    X f hf Y φ hφ hinl hright
 
 end ExtensionLifting
 
@@ -4800,10 +4801,10 @@ example {k : ℕ} (hk : 1 ≤ k) (x y : TauCeti.gradedPiece p G k)
   ⟨TauCeti.gradedPow_add_of_one_le hk x y, fun hp ↦ TauCeti.gradedPow_add_zero_of_odd hp x₀ y₀,
     fun hp ↦ TauCeti.gradedPow_add_zero_of_two hp x₀ y₀, TauCeti.gradedPow_add_zero x₀ y₀⟩
 
-/-- **Layer 8, `π` commutes with scalars in degree zero**: `TauCeti.gradedPow_smul_zero`. -/
+/-- **Layer 8, `π` commutes with scalars in degree zero**: `TauCeti.gradedPow_smul`. -/
 example [NeZero p] (c : ZMod p) (x : TauCeti.gradedPiece p G 0) :
     TauCeti.gradedPow p G 0 (c • x) = c • TauCeti.gradedPow p G 0 x :=
-  TauCeti.gradedPow_smul_zero c x
+  TauCeti.gradedPow_smul c x
 
 /-- **Layer 8, the failure is not vacuous.** In the free pro-`2` group of rank `2` the bracket
 of the two basis classes is nonzero in `gr_1` (`TauCeti.gradedBracket_freeProP_two_ne_zero`),
