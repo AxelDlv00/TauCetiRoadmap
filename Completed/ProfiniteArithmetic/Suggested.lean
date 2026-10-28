@@ -124,25 +124,29 @@ The deliberate differences between the README's requested forms and Tau Ceti's a
 
 The README marks nothing as optional or long-horizon; it has no out-of-scope milestones.
 
-**Not yet certified.** Three README statements have no Tau Ceti declaration at the pinned
-revision, and are not stated here.
+**Post-pin implementations.** Three README interfaces are not stated in this certificate
+because they postdate its dependency pin. All three are proved on Tau Ceti `9d7da548c2842877e670193e66d609d127d66129`:
 
-* Layer 3.4, the detecting group: the triples of `HeisenbergZp p` with all coordinates in
-  `p ^ n ℤ_p` form an open normal subgroup of index `p ^ (3 n)`, and these form a basis of
-  neighbourhoods of `1`. Tau Ceti has only the pro-`p` property `HeisenbergGroup.isProP_padicInt`,
-  proved by an extension argument. The levels are added in
-  https://github.com/TauCetiProject/TauCeti/pull/13171 (`HeisenbergGroup.level`,
-  `mem_level_iff`, `index_level`, `hasBasis_nhds_one_level`), to be certified here after the next
-  pin bump.
-* Layer 3.4, degree one: `gr_1(F)` as the exterior square of `gr_0(F)`, free of rank
-  `r (r - 1) / 2` with `x̄_i ∧ x̄_j ↦ [x̄_i, x̄_j]`. Tau Ceti proves the basis statement
-  `lcsGradedPiece_one_freeProP_bijective` and mentions the exterior square only in prose.
-* Layer 2.4, the pro-`p` theorem: the identification of the kernel on the Frattini quotient with
-  the inverse limit of the finite kernels over the characteristic open normal subgroups contained
-  in `proPFrattini p G`. Tau Ceti describes `ContinuousAut G` by compatible families over all
-  characteristic open quotients (`ContinuousAut.range_pi_mapQuotient`), but not this restricted
-  family of kernels; the bridge needs the cofinality of those subgroups below the open subgroup
-  `proPFrattini p G`, which is more than a specialization.
+* Layer 3.4, the Heisenberg congruence subgroups: `HeisenbergGroup.level`, `mem_level_iff`,
+  `index_level`, and `hasBasis_nhds_one_level` in
+  `TauCeti/Topology/Algebra/Group/Profinite/ProP/Heisenberg.lean` give open normal levels,
+  index `p ^ (3 * n)`, and their neighbourhood basis.
+* Layer 3.4, the exterior square: `TauCeti.freeProP.exteriorSquareEquivLcsGradedPieceOne`,
+  `exteriorSquareEquivLcsGradedPieceOne_ιMulti`, and `finrank_lcsGradedPiece_one` in
+  `TauCeti/Topology/Algebra/Group/Profinite/Free/LowerCentralSeries.lean` identify
+  `⋀² gr_0(F)` with `gr_1(F)`, carry wedges to brackets, and compute rank `r choose 2`.
+* Layer 2.4, the finite-kernel comparison:
+  `TauCeti.IsProP.range_pi_mapQuotient_ker_proPFrattini` and
+  `TauCeti.ContinuousAut.isEmbedding_pi_mapQuotient_ker_proPFrattini` in
+  `TauCeti/Topology/Algebra/Group/ContinuousAut/ProP.lean` identify the global kernel,
+  with its congruence topology, with compatible families in the product of finite kernels.
+  The README uses this compatible-family formulation: the full finite kernels over arbitrary
+  characteristic quotients do not themselves have transition homomorphisms on every element.
+
+These declarations should replace this post-pin inventory with checked citations when the
+repository's dependency pin includes them. The present file certifies its selected statements,
+not those later declarations.
+
 -/
 
 set_option autoImplicit false
