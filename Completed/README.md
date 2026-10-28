@@ -53,3 +53,5 @@ revision against which an earlier version elaborated.
   (declared complete 2026-10-08)
 - [local Galois groups of p-adic fields](LocalGaloisGroups/README.md)
   (declared complete 2026-10-28)
+- [infinitary syntax, back-and-forth, and Scott analysis](InfinitaryLogic/README.md)
+  (declared complete 2026-10-28)
