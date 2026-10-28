@@ -41,3 +41,5 @@ revision against which an earlier version elaborated.
   (declared complete 2026-10-07)
 - [The Chebotarev density theorem](Chebotarev/README.md)
   (declared complete 2026-10-07)
+- [one-parameter semigroups, completely monotone and positive-definite functions, and Bochner-type representations](OneParameterSemigroups/README.md)
+  (declared complete 2026-10-28)
