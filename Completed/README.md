@@ -41,3 +41,5 @@ revision against which an earlier version elaborated.
   (declared complete 2026-10-07)
 - [The Chebotarev density theorem](Chebotarev/README.md)
   (declared complete 2026-10-07)
+- [Real algebraic geometry: sign determination and cylindrical decomposition](RealAlgebraicGeometry/README.md)
+  (declared complete 2026-10-28)
