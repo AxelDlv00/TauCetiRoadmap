@@ -43,4 +43,3 @@ revision against which an earlier version elaborated.
   (declared complete 2026-10-07)
 - [profinite and pro-`p` groups](ProfiniteProPGroups/README.md)
   (declared complete 2026-10-08)
-

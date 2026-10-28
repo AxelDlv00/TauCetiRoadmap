@@ -1,4 +1,5 @@
 import Mathlib
+import TauCetiRoadmap.ProfiniteCohomology.Suggested
 import TauCeti.Algebra.Category.ModuleCat.Topology.Zero
 import TauCeti.GroupTheory.FiniteGroupClass
 import TauCeti.GroupTheory.PLowerCentralSeries
@@ -225,18 +226,17 @@ Three differences from the README's descriptions are deliberate.
   Tau Ceti's and keep Tau Ceti's hypotheses where those are weaker; where a named roadmap theorem
   kept a hypothesis that Tau Ceti does not need, the hypothesis stays in the signature, unused.
 
-The `cd_p` statements use `TauCeti.cohomologicalDimensionAt.{u} p G` for `G : Type u`. The README's
-`ProfiniteCohomology.cd_p p G` is `TauCeti.cohomologicalDimensionAt.{0} p G`. Both quantify over
-coefficient modules in `Type (max u 0) = Type (max u u) = Type u`, so they test the same modules
-and are the same invariant. They are not definitionally equal only because Mathlib's
-`continuousCohomology` carries an auxiliary universe in its cochain complex, which the two readings
-instantiate differently; at `G : Type` they coincide literally.
+The `cd_p` statements use the shared `ProfiniteCohomology.cd_p p G`, namely
+`TauCeti.cohomologicalDimensionAt.{u} p G` for `G : Type u`. The shared supplier fixes both
+coefficients in `Type u` and Mathlib's auxiliary cochain universe to this convention, so the
+canonical pro-`p`, Sylow and Demushkin dimension theorems apply definitionally.
 
-Seven statements of `README.md` are corrected in its "Errata, corrected at archiving" section. One
+Eight statements of `README.md` are corrected in its "Errata, corrected at archiving" section. One
 is an edge-case remark: the abstract Frattini subgroup only *can* differ from `proPFrattini`
-without finite generation (Layer 3). For the other six this file certifies the corrected forms:
+without finite generation (Layer 3). For the other seven this file certifies the corrected forms:
 the deficiency inequality reads `#S - #R ≤ d - r` (Layer 5); the duality package, with
 `H²(G, I(χ)/pⁱ) ≅ ℤ/pⁱ` and the perfect pairings, is for infinite Demushkin groups (Layer 7);
+the prescription condition uses upward multiplication by `p` on `H²` (Layer 7);
 `δ_1` and its polarization carry the commutator terms (Layer 8); for `q ≠ 2` the span statement
 `gr_j(F) = Im δ_j` needs a nonzero `p`-power part, and otherwise reads `Im δ_j + T_j` (Layer 9);
 the even-rank dyadic tail is spanned by the `π^j x̄_i` with `i ≠ 2`, not by the Layer 8 tail
@@ -3667,7 +3667,7 @@ with `Subsingleton` in place of `IsZero`. -/
 theorem cd_p_le_iff_elementaryAbelian_of_isProP (G : Type u) [Group G] [TopologicalSpace G]
     [IsTopologicalGroup G] [CompactSpace G] [TotallyDisconnectedSpace G] (hG : TauCeti.IsProP p G)
     (n : ℕ) :
-    TauCeti.cohomologicalDimensionAt.{u} p G ≤ (n : ℕ∞) ↔
+    ProfiniteCohomology.cd_p p G ≤ (n : ℕ∞) ↔
       ∀ (M : Type u) [AddCommGroup M] [TopologicalSpace M] [IsTopologicalAddGroup M]
         [DiscreteTopology M] [DistribMulAction G M] [ContinuousSMul G M] [Finite M],
         (∀ m : M, p • m = 0) → (∀ (g : G) (m : M), g • m = m) →
@@ -3696,7 +3696,7 @@ theorem exists_ne_zero_invariant_of_isProP (G : Type u) [Group G] [TopologicalSp
 /-- **Layer 6, free implies `cd_p ≤ 1`.** Tau Ceti's
 `TauCeti.freeProP.cohomologicalDimensionAt_le_one`, which holds on any type of generators. -/
 theorem cd_p_freeProP_le_one (n : ℕ) [TotallyDisconnectedSpace (TauCeti.freeProP p (Fin n))] :
-    TauCeti.cohomologicalDimensionAt.{0} p (TauCeti.freeProP p (Fin n)) ≤ 1 :=
+    ProfiniteCohomology.cd_p p (TauCeti.freeProP p (Fin n)) ≤ 1 :=
   TauCeti.freeProP.cohomologicalDimensionAt_le_one (Fact.out : p.Prime).ne_zero
 
 /-- **Layer 6, Serre's theorem**: `cd_p G ≤ 1` implies free pro-`p`, for topologically finitely
@@ -3706,7 +3706,7 @@ the generating type `Fin d(G)` through `TauCeti.freeProP.uliftEquiv`. -/
 theorem isFree_of_cd_p_le_one (G : Type u) [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
     [CompactSpace G] [TotallyDisconnectedSpace G] (hG : TauCeti.IsProP p G)
     (hfg : TauCeti.IsTopologicallyFinitelyGenerated G)
-    (hcd : TauCeti.cohomologicalDimensionAt.{u} p G ≤ 1)
+    (hcd : ProfiniteCohomology.cd_p p G ≤ 1)
     [TotallyDisconnectedSpace
       (TauCeti.freeProP p (Fin (TauCeti.topologicalGeneratorRankNat G hfg)))] :
     Nonempty (G ≃ₜ* TauCeti.freeProP p (Fin (TauCeti.topologicalGeneratorRankNat G hfg))) := by
@@ -3723,10 +3723,10 @@ omit [Fact p.Prime] in
 holds for every profinite `G`, so the pro-`p` hypothesis is not used. -/
 theorem cd_p_eq_of_isOpen (G : Type u) [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
     [CompactSpace G] [TotallyDisconnectedSpace G] (_hG : TauCeti.IsProP p G) (U : OpenSubgroup G)
-    (hfin : TauCeti.cohomologicalDimensionAt.{u} p G ≠ ⊤)
+    (hfin : ProfiniteCohomology.cd_p p G ≠ ⊤)
     [CompactSpace U.toSubgroup] [TotallyDisconnectedSpace U.toSubgroup] :
-    TauCeti.cohomologicalDimensionAt.{u} p U.toSubgroup =
-      TauCeti.cohomologicalDimensionAt.{u} p G :=
+    ProfiniteCohomology.cd_p p U.toSubgroup =
+      ProfiniteCohomology.cd_p p G :=
   TauCeti.cohomologicalDimensionAt_eq_of_isOpen_of_ne_top U.isOpen hfin
 
 /-- **Layer 6, restriction to a `p`-Sylow subgroup is injective** in every degree. In positive
@@ -3757,7 +3757,7 @@ theorem cd_p_eq_of_isProPSylow (G : Type u) [Group G] [TopologicalSpace G] [IsTo
     (hP : TauCeti.IsProPSylow p P) :
     haveI : CompactSpace P :=
       isCompact_iff_compactSpace.mp (TauCeti.IsProPSylow.isClosed hP).isCompact
-    TauCeti.cohomologicalDimensionAt.{u} p P = TauCeti.cohomologicalDimensionAt.{u} p G :=
+    ProfiniteCohomology.cd_p p P = ProfiniteCohomology.cd_p p G :=
   hP.cohomologicalDimensionAt_eq.symm
 
 /-- **Layer 7, an infinite Demushkin group has `cd_p = 2`**: Tau Ceti's
@@ -3765,7 +3765,7 @@ theorem cd_p_eq_of_isProPSylow (G : Type u) [Group G] [TopologicalSpace G] [IsTo
 theorem cd_p_eq_two_of_isDemushkin (G : Type u) [Group G] [TopologicalSpace G]
     [IsTopologicalGroup G] [CompactSpace G] [TotallyDisconnectedSpace G]
     (hG : TauCeti.IsDemushkin p G) (hinf : Infinite G) :
-    TauCeti.cohomologicalDimensionAt.{u} p G = 2 :=
+    ProfiniteCohomology.cd_p p G = 2 :=
   have := hinf
   hG.cohomologicalDimensionAt_eq_two
 
@@ -3862,7 +3862,7 @@ finite-dimensional, and
 `dim H⁰ = 1` and `dim H¹ = d`, read through `TauCeti.IsProP.finite_cohomFp_one_iff`,
 `TauCeti.IsProP.finrank_cohomFp_one` and `TauCeti.cohomFpZeroLinearEquiv`. -/
 example (hG : TauCeti.IsProP p G) (hfg : TauCeti.IsTopologicallyFinitelyGenerated G)
-    (hcd : TauCeti.cohomologicalDimensionAt.{u} p G ≤ 1) (U : OpenSubgroup G) :
+    (hcd : ProfiniteCohomology.cd_p p G ≤ 1) (U : OpenSubgroup G) :
     Module.Finite (ZMod p) (TauCeti.cohomFp p G 0) ∧
       Module.Finite (ZMod p) (TauCeti.cohomFp p G 1) ∧
       Module.Finite (ZMod p) (TauCeti.cohomFp p U.toSubgroup 0) ∧
@@ -4609,7 +4609,7 @@ through `TauCeti.cohomFpLinearEquivH2`, `TauCeti.IsProP.finrank_cohomFp_one` and
 `H⁰` and `H¹` of `G` are finite-dimensional by `TauCeti.IsProP.finite_cohomFp_one_iff`, so only
 `H²` is a hypothesis. -/
 example (hG : TauCeti.IsProP p G) (hfg : TauCeti.IsTopologicallyFinitelyGenerated G)
-    (hcd : TauCeti.cohomologicalDimensionAt.{u} p G ≤ 2)
+    (hcd : ProfiniteCohomology.cd_p p G ≤ 2)
     (h2 : Module.Finite (ZMod p) (TauCeti.cohomFp p G 2)) (U : OpenSubgroup G) :
     Module.Finite (ZMod p) (TauCeti.cohomFp p U.toSubgroup 0) ∧
       Module.Finite (ZMod p) (TauCeti.cohomFp p U.toSubgroup 1) ∧
@@ -4673,7 +4673,7 @@ include hG hn in
 with `n(G) > 1`, `G` is Demushkin exactly when `cd_p G = 2` and `dim H²(N, 𝔽_p) = 1` for every open
 normal `N`: Tau Ceti's `TauCeti.isDemushkin_iff_finrank_cohomFp_two_openSubgroup`, which does not
 assume the one-relator hypothesis. -/
-example : TauCeti.IsDemushkin p G ↔ TauCeti.cohomologicalDimensionAt.{u} p G = 2 ∧
+example : TauCeti.IsDemushkin p G ↔ ProfiniteCohomology.cd_p p G = 2 ∧
     ∀ N : OpenSubgroup G, (N : Subgroup G).Normal →
       Module.finrank (ZMod p) (TauCeti.cohomFp p (N : Subgroup G) 2) = 1 :=
   TauCeti.isDemushkin_iff_finrank_cohomFp_two_openSubgroup hG hfg hn
@@ -4684,7 +4684,7 @@ group with `n(G) > 1`, `G` is Demushkin exactly when `cd_p G = 2` and
 `n(N) - 2 = [G : N](n(G) - 2)` for every open normal `N`: Tau Ceti's
 `TauCeti.isDemushkin_iff_topologicalGeneratorRankNat_openSubgroup`. -/
 example (h2 : Module.finrank (ZMod p) (TauCeti.cohomFp p G 2) = 1) :
-    TauCeti.IsDemushkin p G ↔ TauCeti.cohomologicalDimensionAt.{u} p G = 2 ∧
+    TauCeti.IsDemushkin p G ↔ ProfiniteCohomology.cd_p p G = 2 ∧
       ∀ N : OpenSubgroup G, (N : Subgroup G).Normal →
         (TauCeti.topologicalGeneratorRankNat (N : Subgroup G) (hfg.of_openSubgroup N) : ℤ) - 2 =
           (N : Subgroup G).index * ((TauCeti.topologicalGeneratorRankNat G hfg : ℤ) - 2) :=
@@ -4694,7 +4694,7 @@ include hG hn in
 /-- **Layer 7, recognition through `dim H²`, sharpened to index `p`**: Tau Ceti's
 `TauCeti.isDemushkin_iff_finrank_cohomFp_two_openSubgroup_index_eq`. -/
 example (h2 : Module.finrank (ZMod p) (TauCeti.cohomFp p G 2) = 1) :
-    TauCeti.IsDemushkin p G ↔ TauCeti.cohomologicalDimensionAt.{u} p G = 2 ∧
+    TauCeti.IsDemushkin p G ↔ ProfiniteCohomology.cd_p p G = 2 ∧
       ∀ N : OpenSubgroup G, (N : Subgroup G).Normal → (N : Subgroup G).index = p →
         Module.finrank (ZMod p) (TauCeti.cohomFp p (N : Subgroup G) 2) = 1 :=
   TauCeti.isDemushkin_iff_finrank_cohomFp_two_openSubgroup_index_eq hG hfg h2 hn
@@ -4703,7 +4703,7 @@ include hG hn in
 /-- **Layer 7, recognition through the ranks, sharpened to index `p`**: Tau Ceti's
 `TauCeti.isDemushkin_iff_topologicalGeneratorRankNat_openSubgroup_index_eq`. -/
 example (h2 : Module.finrank (ZMod p) (TauCeti.cohomFp p G 2) = 1) :
-    TauCeti.IsDemushkin p G ↔ TauCeti.cohomologicalDimensionAt.{u} p G = 2 ∧
+    TauCeti.IsDemushkin p G ↔ ProfiniteCohomology.cd_p p G = 2 ∧
       ∀ N : OpenSubgroup G, (N : Subgroup G).Normal → (N : Subgroup G).index = p →
         (TauCeti.topologicalGeneratorRankNat (N : Subgroup G) (hfg.of_openSubgroup N) : ℤ) - 2 =
           p * ((TauCeti.topologicalGeneratorRankNat G hfg : ℤ) - 2) :=
@@ -7034,7 +7034,7 @@ if it is free pro-`p` on a pointed profinite space, its presentation on some sub
 -/
 example {p : ℕ} [Fact p.Prime] {G : Type u} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
     [CompactSpace G] [TotallyDisconnectedSpace G] (hG : TauCeti.IsProP p G) :
-    TauCeti.cohomologicalDimensionAt.{u} p G ≤ 1 ↔
+    ProfiniteCohomology.cd_p p G ≤ 1 ↔
       ∃ s : Set G, TauCeti.ConvergesToOne s ∧
         ∃ e : TauCeti.freeProPInsertOne p s ≃ₜ* G, ⇑e = ⇑(hG.presentation s) :=
   hG.cohomologicalDimensionAt_le_one_iff_exists_convergesToOne_continuousMulEquiv_presentation
@@ -7075,7 +7075,7 @@ theorem cd_p_le_one_of_isClosed_freeProP (p : ℕ) [Fact p.Prime] (n : ℕ)
     (H : Subgroup (TauCeti.freeProP p (Fin n)))
     (hH : IsClosed (H : Set (TauCeti.freeProP p (Fin n))))
     [CompactSpace H] [TotallyDisconnectedSpace H] :
-    TauCeti.cohomologicalDimensionAt.{0} p H ≤ 1 :=
+    ProfiniteCohomology.cd_p p H ≤ 1 :=
   TauCeti.freeProP.cohomologicalDimensionAt_le_one_of_isClosed (Fact.out : p.Prime).ne_zero hH
 
 end Layer10

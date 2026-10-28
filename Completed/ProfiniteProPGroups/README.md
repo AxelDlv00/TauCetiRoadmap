@@ -1237,9 +1237,11 @@ would not agree with the standard `cd_p`.
   `dim H¹(G, 𝔽_p) < ∞`, the following three conditions are equivalent (Labute Prop. 6):
   1. the reduction map `H¹(G, I(χ)/p^i) → H¹(G, I(χ)/p)` is surjective for every
      `i ≥ 1`;
-  2. `H²(G, I(χ)/p^i) → H²(G, I(χ)/p^{i-1})` is injective for every `i ≥ 2`,
+  2. multiplication by `p` induces an injective map
+     `H²(G, I(χ)/p^i) → H²(G, I(χ)/p^{i+1})` for every `i ≥ 1`,
      equivalently the connecting map
-     `H¹(G, I(χ)/p^{i-1}) → H²(G, I(χ)/p)` is zero;
+     `H¹(G, I(χ)/p) → H²(G, I(χ)/p^i)` of
+     `0 → I(χ)/p^i → I(χ)/p^{i+1} → I(χ)/p → 0` is zero;
   3. for a minimal generating tuple `g₁, …, g_n` and every
      `(c₁, …, c_n) ∈ ℤ_p^n`, there is a compatible inverse system of continuous crossed
      homomorphisms to `I(χ)/p^i` taking `g_j` to `c_j mod p^i`.
@@ -2227,6 +2229,10 @@ provenance ledger.
   finite presentation (adding a redundant relator lowers `#S - #R` and leaves `d - r` unchanged).
   Equality holds exactly when the number of relators is the least number of normal generators of
   the relation subgroup, `d(R ⧸ Rᵖ[R, F])`; a minimal generating set alone does not give it.
+- **Layer 7, the prescription connecting map.** Condition 2 uses the upward map on `H²`
+  induced by multiplication by `p`, from level `i` to level `i + 1`, not downward reduction.
+  Its connecting map is `H¹(G, I(χ)/p) → H²(G, I(χ)/p^i)` for
+  `0 → I(χ)/p^i → I(χ)/p^{i+1} → I(χ)/p → 0`.
 - **Layer 7, duality needs an infinite group.** The identification `H²(G, I(χ)/pⁱ) ≅ ℤ/pⁱ` and
   the perfect pairings into it hold for *infinite* Demushkin groups. `ℤ/2` is Demushkin at `p = 2` with `χ` the sign, and `H²(ℤ/2, I(χ)/4)` has
   order `2`, not `4`. The trace isomorphism `H²(G, 𝔽_p) ≅ 𝔽_p` holds for every Demushkin group.
