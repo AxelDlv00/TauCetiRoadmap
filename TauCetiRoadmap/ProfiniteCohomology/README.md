@@ -1792,9 +1792,12 @@ Layer 10.
   `TauCeti.StrictCohomologicalDimensionLE`, `TauCeti.cohomologicalDimensionAt` and
   `TauCeti.strictCohomologicalDimensionAt`, with `TauCeti.leastENatBound` and
   `TauCeti.cohomologicalDimension` for `cd`. Tau Ceti lets the coefficients range over
-  `Type (max u v)` for an extra universe `v`; this roadmap reads its invariants at `v = 0`, which is
-  §3's convention that the coefficients live in the universe of the group, and `Suggested.lean`
-  carries its names as abbreviations of the Tau Ceti declarations at that universe. So
+  `Type (max u v)` for an extra universe `v`; this roadmap reads its invariants at `v = u`, so
+  coefficients live in `Type u`, as in §3. This also fixes Mathlib's auxiliary cochain universe
+  to the convention used by Tau Ceti's pro-`p`, Sylow and Demushkin dimension theorems; sharing
+  only the coefficient universe would not make two cohomology constructions definitionally equal.
+  `Suggested.lean` carries its names as abbreviations of the Tau Ceti declarations at this
+  convention. So
   `cd_p G ≤ n ↔ CohomologicalDimensionLE p G n` (`cd_p_le_iff`, which is
   `TauCeti.cohomologicalDimensionAt_le_iff`), and `cd_p G = ⊤` exactly when no bound holds; likewise
   for `scd_p` (`scd_p_le_iff`). Finally `cd G = ⨆ p, cd_p G` in `ℕ∞`, over primes `p`. The
