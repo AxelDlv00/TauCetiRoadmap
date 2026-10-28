@@ -1,7 +1,7 @@
 # Roadmap: profinite and pro-`p` groups
 
 **Archived, declared complete 2026-10-08.** `Suggested.lean` states the milestones below, each now
-discharged by the Tau Ceti (or Mathlib) declaration that realizes it, with no `sorry`. Seven
+discharged by the Tau Ceti (or Mathlib) declaration that realizes it, with no `sorry`. Eight
 statements of this document were found to be mathematically wrong at archiving; they are corrected
 in the closing section *Errata, corrected at archiving*. The first is an edge-case remark; for
 the other seven `Suggested.lean` certifies the corrected forms.
