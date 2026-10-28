@@ -38,6 +38,7 @@ body:
         - CFSGBasicProperties
         - CFSGStatement
         - CharacteristicClasses
+        - ChevalleyGroups
         - ClassFieldTheory
         - ClassicalArithmeticCompletion
         - ClassifyingSpaces
