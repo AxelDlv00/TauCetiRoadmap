@@ -57,6 +57,7 @@ body:
         - DerivedModuleAlgebra
         - DifferentialGeometry
         - DiophantineApproximationAndTranscendence
+        - EffectiveBounds
         - EllipticCurves
         - EllipticIntegrals
         - EnhancedDerivedSheaves
