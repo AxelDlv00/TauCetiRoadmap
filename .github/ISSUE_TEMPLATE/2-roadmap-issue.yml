@@ -110,6 +110,7 @@ body:
         - PurityOfBranchLocus
         - QuadraticFormInvariants
         - QuantumGroups
+        - RandomMatrices
         - Rank24LatticeConstructions
         - RealAnalyticGeometry
         - ReductiveGroups
