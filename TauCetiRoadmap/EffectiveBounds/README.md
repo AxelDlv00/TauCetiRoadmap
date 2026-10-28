@@ -1,14 +1,15 @@
 # Roadmap: effective arithmetic bounds and geometry of numbers
 
-**Status: reopened for the existing Layer 3 completion targets (2026-10-28).**
-The earlier archive declaration covered the effective bounds of Layers 0–2, but the full
-approved scope also requires explicit regulator lower bounds in positive rank and the unit-log
-volume comparisons of Layer 3. These remain active until their implementation PRs merge:
+**Status: reopened for the existing Layer 0 and Layer 3 completion targets (2026-10-28).**
+The earlier archive declaration was premature for the full approved scope. The remaining work
+includes removing the redundant `box` wrapper as Layer 0 requires, and the explicit regulator
+lower bounds and unit-log volume comparisons of Layer 3. The two Layer 3 implementations are
 [Tau Ceti #22059](https://github.com/TauCetiProject/TauCeti/pull/22059) and
-[#22064](https://github.com/TauCetiProject/TauCeti/pull/22064).
+[#22064](https://github.com/TauCetiProject/TauCeti/pull/22064); the wrapper removal is a separate
+implementation change. These targets remain active until their source PRs merge and are verified.
 The mathematical targets below are unchanged. The long-horizon Brauer–Siegel paragraph remains
 an aspiration, not an additional completion target. Historical reports are retained as dated
-snapshots; the roadmap will be archived again after the two Layer 3 targets are verified.
+snapshots; re-archiving will be part of the already open archive batch once all targets are met.
 
 
 Mathlib has Minkowski's convex-body theorem, the canonical embedding, the Minkowski
