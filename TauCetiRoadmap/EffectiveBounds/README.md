@@ -1,15 +1,16 @@
 # Roadmap: effective arithmetic bounds and geometry of numbers
 
-**Status: declared complete by the maintainers (2026-07-02).** The library this roadmap
-asked for has been built: the whole spine below has landed, sorry-free, in
-[TauCeti](https://github.com/TauCetiProject/TauCeti): the Layer-1 bounds
-(`abs_discr_le_of_basis_isIntegral`, `classNumber_le_bound`, `units_sq_index_le`),
-the explicit ideal count (`card_ideal_absNorm_le`), and the Layer-2 summit, the
-effective Hermite–Minkowski count
-(`ncard_setOf_finiteDimensional_abs_discr_le_le`), all under
-`TauCeti/NumberTheory/EffectiveBounds/`, with the geometry-of-numbers engine under
-`TauCeti/NumberTheory/GeometryOfNumbers/`. This roadmap is archived and no longer
-offered to contributors.
+**Status: reopened for the existing Layer 0 and Layer 3 completion targets (2026-10-28).**
+The earlier archive declaration was premature for the full approved scope. The remaining work
+includes removing the redundant `box` wrapper as Layer 0 requires, and the explicit regulator
+lower bounds and unit-log volume comparisons of Layer 3. The two Layer 3 implementations are
+[Tau Ceti #22059](https://github.com/TauCetiProject/TauCeti/pull/22059) and
+[#22064](https://github.com/TauCetiProject/TauCeti/pull/22064); the wrapper removal is a separate
+implementation change. These targets remain active until their source PRs merge and are verified.
+The mathematical targets below are unchanged. The long-horizon Brauer–Siegel paragraph remains
+an aspiration, not an additional completion target. Historical reports are retained as dated
+snapshots; re-archiving will be part of the already open archive batch once all targets are met.
+
 
 Mathlib has Minkowski's convex-body theorem, the canonical embedding, the Minkowski
 bound, and even the qualitative summit (Minkowski's lower bound on the discriminant
