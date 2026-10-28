@@ -51,3 +51,5 @@ revision against which an earlier version elaborated.
   (declared complete 2026-10-28)
 - [profinite and pro-`p` groups](ProfiniteProPGroups/README.md)
   (declared complete 2026-10-08)
+- [local Galois groups of p-adic fields](LocalGaloisGroups/README.md)
+  (declared complete 2026-10-28)
