@@ -40,7 +40,7 @@ manifold, collar, gluing, connected-sum, and PL carriers throughout.
 | [HopfRinow](../HopfRinow/README.md), Layers 0–4 | Levi-Civita connection, geodesic flow, normal balls, length and metric completeness | Time-dependent comparisons, reduced paths, complete pointed flow limits |
 | [RiemannianGeometry](../RiemannianGeometry/README.md), R1–R5a and R7.0 | Tensor/curvature conventions, variations, Jacobi fields, comparison geometry, model metrics, immersion area calculus and scalar Bochner identity | Ricci-surgery estimates, branched sphere/filling analysis and curve shortening in a moving ambient three-manifold |
 | [PDE](../PDE/README.md), Lanes A, C–F; [ComplexKahlerGeometry](../ComplexKahlerGeometry/README.md), K5a | Sobolev/weak compactness, elliptic/parabolic regularity, scalar maximum principles and real compact-bundle Sobolev/elliptic theory | The noncompact cap construction and moving-curve nonlinear problems, with their extra localization/compactness estimates |
-| [RicciFlow, R1–R5](https://github.com/TauCetiProject/TauCetiRoadmap/blob/544d4ff582d69f200582787ba09a29de3abfe359/TauCetiRoadmap/RicciFlow/README.md) | Metric variation, compact-bundle parabolic theory, DeTurck, compact-flow existence/uniqueness/continuation, Shi estimates and curvature evolution/maximum principles | Hamilton–Ivey and differential Harnack specializations, pointed compactness, reduced geometry, ancient solutions and all surgery/extinction targets below |
+| [RicciFlow, R1–R5](https://github.com/TauCetiProject/TauCetiRoadmap/blob/544d4ff582d69f200582787ba09a29de3abfe359/TauCetiRoadmap/RicciFlow/README.md) | Metric variation, compact-bundle parabolic theory, DeTurck, compact-flow existence/uniqueness/continuation, global Shi estimates and curvature evolution/maximum principles on closed manifolds | Localized Shi estimates and their complete noncompact applications in P2, Hamilton–Ivey and differential Harnack specializations, pointed compactness, reduced geometry, ancient solutions and all surgery/extinction targets below |
 
 The last row cites the explicit supplier contract in the RicciFlow proposal. The other rows refer to the corresponding merged roadmap targets.
 
@@ -123,7 +123,7 @@ using different normalizations.
 | Layer | Local predecessors | Principal output |
 | --- | --- | --- |
 | P1 | none | Closed-three-manifold topology, models and metric normalization |
-| P2 | P1 | Flow adapters, pinching, Harnack and pointed compactness |
+| P2 | P1 | Flow adapters, localized derivative estimates, pinching, Harnack and pointed compactness |
 | P3 | P2 | Ordinary/spacetime reduced geometry and noncollapse |
 | P4 | P2, P3 | Ancient κ-solutions and shrinking asymptotic models |
 | P5 | P4 | Canonical neighborhoods and singular-time geometry |
@@ -180,9 +180,9 @@ calculation.
 
 ## P2. Ordinary flow estimates and complete pointed compactness
 
-Consume RicciFlow R1–R5 for compact initial-value theory, continuation, local
-derivative estimates and curvature evolution. Prove the adapters between that
-flow carrier, the metrics selected in P1 and the conventions above. The compact
+Consume RicciFlow R1–R5 for compact initial-value theory, continuation, global
+Shi estimates on closed manifolds and curvature evolution. Prove the adapters
+between that flow carrier, the metrics selected in P1 and the conventions above. The compact
 initial-value theorem includes uniqueness on common domains, smooth dependence,
 time restriction/restart, pullback, scaling, maximal-time construction and
 continuation when curvature remains uniformly bounded. Use compact-bundle
@@ -195,6 +195,27 @@ time-dependent metric and connection representatives comes with restriction
 and extension maps and proofs that their composites preserve the restricted
 metric, Ricci equation and regularity. Connection comparison uses the
 Levi-Civita uniqueness theorem on differentiable fields.
+
+Construct the localized Shi estimates of Morgan–Tian, Theorems 3.27–3.29.
+For every dimension `n`, derivative order `k≥0` and positive `K,A,r`, construct
+`C(n,k,K,A,r)>0` with the following property. Let `(U,g(t))`, `0≤t≤T`, be a
+smooth Ricci flow with `0<T≤A/K`, and let `B_(g(0))(p,r)` have compact closure
+in `U`. If `|Rm|≤K` on `B_(g(0))(p,r)×[0,T]`, prove
+
+`|∇^k Rm|_(g(t))(y) ≤ C(n,k,K,A,r) t^(-k/2)`
+
+for every `y∈B_(g(0))(p,r/2)` and `0<t≤T`. The constant is uniform over
+the flows and independent of the geometry outside the controlled region.
+Prove the versions with prescribed initial covariant-derivative bounds, with
+constants also depending on those bounds, including uniform bounds up to
+`t=0` at the controlled orders.
+Build the evolving-metric distance comparisons, spatial/time cutoffs and
+their gradient and `(∂t-Δ)` bounds, with support-barrier arguments at cut loci,
+localized maximum principles and the nested-region derivative induction.
+Derive the complete noncompact and exhaustion-uniform versions on buffered
+regions, with time-translation and parabolic-rescaling laws. Use these
+estimates to supply the derivative hypotheses for P2 compactness in P4–P5
+and for the standard-cap exhaustion in P6.
 
 Prove the three-dimensional Hamilton–Ivey estimate. With `ν(0)≥-1`, at a point
 where `ν<0` require
@@ -274,8 +295,9 @@ the strong maximum principle.
 
 Construct backward blowdown sequences at reduced-distance-controlled points.
 Prove the required curvature, distance, noncollapse and injectivity estimates,
-then apply P2 compactness and P3 reduced-volume rigidity to obtain an actual
-complete nonflat gradient shrinking asymptotic soliton. Construct the limit
+then apply P2's localized derivative estimates and compactness, and P3
+reduced-volume rigidity, to obtain an actual complete nonflat gradient shrinking
+asymptotic soliton. Construct the limit
 carrier and its convergence embeddings from the rescaled flows.
 
 Classify two-dimensional ancient κ-solutions as shrinking round spheres or
@@ -327,7 +349,8 @@ the blowup argument, including the quotient branches.
 For ordinary three-dimensional flows with Hamilton–Ivey pinching, prove the
 bounded-distance curvature estimates and the high-curvature canonical
 neighborhood theorem on a finite time horizon, using a point-picking
-construction and complete pointed blowup limits. The theorem states its
+construction, P2's localized derivative estimates and complete pointed blowup
+limits. The theorem states its
 noncollapse and prior-scale hypotheses and chooses its threshold before the
 flow/point. Include the spacetime versions used near surgery.
 
@@ -350,8 +373,9 @@ sectional curvature `1/4`: on some interval `0≤r<r_tip` with `r_tip>0`,
 `f(r)=2 sin(r/2)`. Prove this class is
 nonempty and prove the metric/curvature assertions, including smoothness at
 the tip. For each such initial metric construct its complete
-bounded-curvature Ricci flow by exhaustion and local parabolic estimates,
-prove uniqueness among complete solutions with curvature bounded on compact
+bounded-curvature Ricci flow by exhaustion, P2's localized derivative estimates
+and local parabolic existence estimates. Prove uniqueness among complete
+solutions with curvature bounded on compact
 time slabs, and prove its curvature, asymptotic-cylinder and
 canonical-neighborhood estimates on `[0,1)`, with maximal time one. State
 which constants depend on the chosen cap profile. Include the noncompact
